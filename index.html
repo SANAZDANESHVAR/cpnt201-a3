@@ -4,14 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/SANAZDANESHVAR/my-svg/main/script.js">
+  <link rel="stylesheet" href="https://github.com/SANAZDANESHVAR/cpnt201-a3/blob/main/main.css">
 
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/SANAZDANESHVAR/my-svg/main/main.css">
+  <link rel="stylesheet" href="https://github.com/SANAZDANESHVAR/cpnt201-a3/blob/main/script.js">
+  <style>
+    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main{
+  background-color:hsla(193, 25%, 36%, 1);
+}
+
+/* coffee container*/ 
+.svg-container {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  fill: hsla(193, 25%, 36%, 1);
+}
+
+/* SVG image sizing and color */
+.my-svg {
+  width:80%;
+  margin: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  fill:hsla(193, 25%, 36%, 1);
+}
+
+   
+ .bean1, .bean2, .bean3, .bean4{
+   fill:  #9a8478;
+  stroke: rgb(70, 39, 5);
+  stroke-width: 5px;
+}
+
+/* a class for making changes in radar */
+.fansy {
+ stroke:#FF9900;
+ stroke-width:15px;
+ 
+}
+
+button {
+  padding: 1rem 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background: #ddd;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  cursor: pointer;
+}
+
+button:active {
   
+  background: hsla(243, 100%, 50%, 1);
+}
+button:hover {
+  background-color:olivedrab;
+} 
+/* there 4 path fpr beans and one for rader which are classified by name in js  */
+
+  </style>
 </head>
 <body>
     <main>
-
+      <s
       <div class="svg-container">
             <svg class="my-svg" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1069 593">
 
@@ -44,7 +111,18 @@
               </div>
        </div>  
     </main>
-  
+    <script>
+      
+ const path = document.querySelector('.radar');
+ const button = document.querySelector('button');
+
+ /*a `click` handler for our button using */
+button.addEventListener('click', function(){
+   
+path.classList.toggle('fansy');
+
+  });
+    </script>
    </body>
  </html>
 
